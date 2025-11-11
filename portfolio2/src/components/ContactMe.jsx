@@ -26,11 +26,11 @@ function ContactMe() {
 </div>
             <div className="flex flex-col lg:gap-8">
 
-            <a target="_blank" href="https://github.com/GomoAtDVT" className="animate-fadeIn3 flex  rounded-3xl justify-center text-center items-center px-7 py-1 w-80 h-32 gap-5 text-sm mb-5 font-semibold dark:text-white bg-zinc-400 dark:bg-zinc-800 opacity-90 shadow-lg">
+            <a target="_blank" href="https://github.com/gmotlhamme" className="animate-fadeIn3 flex  rounded-3xl justify-center text-center items-center px-7 py-1 w-80 h-32 gap-5 text-sm mb-5 font-semibold dark:text-white bg-zinc-400 dark:bg-zinc-800 opacity-90 shadow-lg">
                 <i className="bi bi-github text-xl"></i>
                 <p>Github</p>
             </a>
-            <a  href="/CVGomolemo.pdf" download="GMotlhamme_CV.pdf" className="animate-fadeIn3 flex  rounded-3xl justify-center text-center items-center px-7 py-1 w-80 h-32 gap-5 text-sm mb-5 font-semibold dark:text-white bg-zinc-400 dark:bg-zinc-800 opacity-90 shadow-lg">
+            <a  href="/GMotlhammeCV.pdf" download="GMotlhamme_CV.pdf" className="animate-fadeIn3 flex  rounded-3xl justify-center text-center items-center px-7 py-1 w-80 h-32 gap-5 text-sm mb-5 font-semibold dark:text-white bg-zinc-400 dark:bg-zinc-800 opacity-90 shadow-lg">
                 <i className="bi bi-download text-xl"></i>
                 <p>Download CV</p>
             </a>

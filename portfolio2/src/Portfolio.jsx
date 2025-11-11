@@ -192,7 +192,7 @@ function Portfolio() {
             PRODUCING <br></br>QUALITY VISUAL <br></br>REPRESENTATION
           </p>
 
-          <p className="animate-fadeIn2 absolute lg:left-0 left-10 lg:bottom-28 sm:bottom-100 md:bottom-30 md:left-25">
+          <p className="animate-fadeIn2 absolute  lg:left-10 left-10 lg:bottom-34 bottom-100 md:bottom-30 md:left-28">
             BY MAINTAINING TRUST <br></br>BETWEEN CLIENTS
           </p>
 

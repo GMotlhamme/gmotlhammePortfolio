@@ -21,15 +21,14 @@ function Projects() {
                   interact with Reddit channels,<br></br> showcasing my skills
                   in API integration<br></br> and user interface design.
                 </p>
-                <button className="border-2 dark:border-amber-200 dark:hover:text-amber-300 cursor-pointer rounded ">
+                
                   <a
-                    href="https://github.com/GomoAtDVT/Subreddit"
+                    href="https://github.com/gmotlhamme/Subreddit"
                     target="_blank"
-                    className=""
+                    className="border-2 flex justify-center dark:border-amber-200 dark:hover:text-amber-300 cursor-pointer rounded "
                   >
                     VIEW
                   </a>
-                </button>
               </div>
             </div>
 
@@ -45,15 +44,14 @@ function Projects() {
                   productivity. Showcasing my skills in DOM manipulation in
                   JavaScript and user interface design.
                 </p>
-                <button className="border-2 dark:border-amber-200 dark:hover:text-amber-300 cursor-pointer rounded ">
+                
                   <a
-                    href="https://gomoatdvt.github.io/To-Do-list/"
+                    href="https://gmotlhamme.github.io/To-Do-list/"
                     target="_blank"
-                    className=""
+                    className="border-2 dark:border-amber-200 dark:hover:text-amber-300 cursor-pointer rounded "
                   >
                     VIEW
                   </a>
-                </button>
               </div>
             </div>
 
@@ -69,15 +67,14 @@ function Projects() {
                   Showcasing my skills in Node package management, DOM
                   manipulation in JavaScript and user interface design.
                 </p>
-                <button className="border-2 dark:border-amber-200 dark:hover:text-amber-300 cursor-pointer rounded ">
+              
                   <a
-                    href="https://gomoatdvt.github.io/Age-calculator/"
+                    href="https://gmotlhamme.github.io/Age-calculator/"
                     target="_blank"
-                    className=""
+                    className="border-2 dark:border-amber-200 dark:hover:text-amber-300 cursor-pointer rounded "
                   >
                     VIEW
                   </a>
-                </button>
               </div>
             </div>
 
@@ -92,11 +89,9 @@ function Projects() {
                   post, and delete blogs.<br></br> showcasing my skills in DOM
                   Manipulation<br></br> and user interface design.
                 </p>
-                <button className="border-2 dark:border-amber-200 dark:hover:text-amber-300 cursor-pointer px-2 rounded ">
-                  <a href="https://echo-space-one.vercel.app/" target="_blank" className="">
+                  <a className="justify-center flex border-2 dark:border-amber-200 dark:hover:text-amber-300 cursor-pointer px-2 rounded " href="https://echo-space-one.vercel.app/" target="_blank" >
                     VIEW
                   </a>
-                </button>
               </div>
             </div>
           </section>
