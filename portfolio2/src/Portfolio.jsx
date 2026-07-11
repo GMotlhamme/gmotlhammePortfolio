@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, {  useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import MoreInfoModal from "./components/moreInfoModal";
@@ -9,16 +9,16 @@ import { service } from "./services.json";
 import ProjectsBanner from "./components/ProjectsBanner";
 import Projects from "./components/Projects";
 import ContactMe from "./components/ContactMe";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 function Portfolio() {
-  const [phone, setPhone] = useState("");
-  const [contactForm, setContactForm] = useState({
-    name: "",
-    company: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
+  // const [phone, setPhone] = useState("");
+  // const [contactForm, setContactForm] = useState({
+  //   name: "",
+  //   company: "",
+  //   email: "",
+  //   phone: "",
+  //   message: "",
+  // });
 
   const sidebarBtn = () => {
     const sidebar = document.getElementById("sidebar");
@@ -26,11 +26,11 @@ function Portfolio() {
     sidebar.classList.toggle("block");
   };
 
-  const changeAppearence = () => {
-    const toggleContainer = document.getElementById("toggle-container");
-    toggleContainer.classList.toggle("invisible");
-    toggleContainer.classList.toggle("visible");
-  };
+  // const changeAppearence = () => {
+  //   const toggleContainer = document.getElementById("toggle-container");
+  //   toggleContainer.classList.toggle("invisible");
+  //   toggleContainer.classList.toggle("visible");
+  // };
   const [colorscheme, setColorScheme] = useState("dark:");
   const lightMode = () => {
     setColorScheme("")
@@ -45,7 +45,6 @@ function Portfolio() {
     const serviceId = event.currentTarget.id; // Get the id of the clicked service
     const services = service.find((s) => s.id === Number.parseInt(serviceId)); // Find the service data based on the id
     setIsModalOpen(true);
-    console.log(services);
     setSelectedService(services); // Set the selected service data
   };
 
@@ -53,38 +52,38 @@ function Portfolio() {
     setIsModalOpen(false);
   };
 
-  function sendEmail(event) {
-    const name = event.get("full-name");
-    const company = event.get("company");
-    const email = event.get("email");
-    const phone = event.get("phone");
-    const message = event.get("message");
+  // function sendEmail(event) {
+  //   const name = event.get("full-name");
+  //   const company = event.get("company");
+  //   const email = event.get("email");
+  //   const phone = event.get("phone");
+  //   const message = event.get("message");
 
-    emailjs
-      .send(
-        import.meta.env.VITE_SERVICE_ID,
-        import.meta.env.VITE_TEMPLATE_ID,
-        { name, company, email, phone, message },
-        {
-          publicKey: import.meta.env.VITE_EMAIL_SERVICE_KEY,
-        }
-      )
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          setContactForm({
-            name: "",
-            company: "",
-            email: "",
-            message: "",
-          });
-          setPhone("");
-        },
-        (error) => {
-          console.log("FAILED...", error);
-        }
-      );
-  }
+  //   emailjs
+  //     .send(
+  //       import.meta.env.VITE_SERVICE_ID,
+  //       import.meta.env.VITE_TEMPLATE_ID,
+  //       { name, company, email, phone, message },
+  //       {
+  //         publicKey: import.meta.env.VITE_EMAIL_SERVICE_KEY,
+  //       }
+  //     )
+  //     .then(
+  //       () => {
+  //         console.log("SUCCESS!");
+  //         setContactForm({
+  //           name: "",
+  //           company: "",
+  //           email: "",
+  //           message: "",
+  //         });
+  //         setPhone("");
+  //       },
+  //       (error) => {
+  //         console.log("FAILED...", error);
+  //       }
+  //     );
+  // }
 
   return (
     <>
@@ -207,43 +206,36 @@ function Portfolio() {
         <ServiceBanner />
 
         <section className=" bg-transparent overflow-y-scroll styleScroll lg:grid-cols-1 mt-2 lg:mt-0 h-110 flex flex-col gap-2.5 w-full">
-          <div className='bg-[url("/soft-performance.jpg")] text-2xl lg:text-4xl   dark:text-white   dark:bg-[url("/blend.jpg")] bg-cover bg-bottom dark:bg-bottom mr-1.5 h-35 p-4 rounded-lg'>
+          <div onClick={openModel} id="1" className='bg-[url("/soft-performance.jpg")] text-2xl lg:text-4xl   dark:text-white   dark:bg-[url("/blend.jpg")] bg-cover bg-bottom dark:bg-bottom mr-1.5 h-35 p-4 rounded-lg cursor-pointer'>
             <p className="animate-fadeIn3">WEB DEVELOPMENT</p>{" "}
             <p
-              className="text-lg flex justify-end mt-11 lg:mr-4 gap-2 dark:text-white cursor-pointer"
-              onClick={openModel}
-              id="1"
+              className="text-lg flex justify-end mt-11 lg:mr-4 gap-2 dark:text-white "
+              
             >
               LEARN MORE <i className="bi bi-arrow-up-right-square "></i>
             </p>
           </div>
-          <div className='  text-2xl lg:text-4xl bg-[url("/soft-performance.jpg")]  dark:text-white dark:bg-[url("/blend.jpg")] bg-cover bg-bottom dark:bg-bottom mr-1.5 h-35 p-4 rounded-lg'>
+          <div onClick={openModel} id="2"  className='cursor-pointer  text-2xl lg:text-4xl bg-[url("/soft-performance.jpg")]  dark:text-white dark:bg-[url("/blend.jpg")] bg-cover bg-bottom dark:bg-bottom mr-1.5 h-35 p-4 rounded-lg'>
             <p className="animate-fadeIn3">FULL STACK DEVELOPMENT</p>{" "}
             <p
-              className="text-lg flex justify-end mt-11 lg:mr-4 gap-2 dark:text-white cursor-pointer"
-              onClick={openModel}
-              id="2"
+              className="text-lg flex justify-end mt-11 lg:mr-4 gap-2 dark:text-white "
             >
               LEARN MORE <i className="bi bi-arrow-up-right-square "></i>
             </p>
           </div>
 
-          <div className='text-2xl lg:text-4xl  bg-[url("/soft-performance.jpg")] dark:text-white dark:bg-[url("/blend.jpg")] bg-cover bg-bottom dark:bg-bottom mr-1.5 h-35 p-4 rounded-lg'>
+          <div onClick={openModel} id="3" className='text-2xl lg:text-4xl  bg-[url("/soft-performance.jpg")] dark:text-white dark:bg-[url("/blend.jpg")] bg-cover bg-bottom dark:bg-bottom mr-1.5 h-35 p-4 rounded-lg cursor-pointer'>
             <p className="animate-fadeIn3">BACKEND DEVELOPMENT</p>
             <p
-              className="text-lg flex justify-end mt-11 lg:mr-4 gap-2 dark:text-white cursor-pointer"
-              onClick={openModel}
-              id="3"
+              className="text-lg flex justify-end mt-11 lg:mr-4 gap-2 dark:text-white"
             >
               LEARN MORE <i className="bi bi-arrow-up-right-square "></i>
             </p>
           </div>
-          <div className='text-2xl lg:text-4xl bg-[url("/soft-performance.jpg")] duration-300 ease-in-out  dark:text-white dark:bg-[url("/blend.jpg")] bg-cover bg-bottom  dark:bg-bottom mr-1.5 h-max lg:h-35 p-4 rounded-lg'>
+          <div onClick={openModel} id="4" className='text-2xl lg:text-4xl bg-[url("/soft-performance.jpg")] duration-300 ease-in-out  dark:text-white dark:bg-[url("/blend.jpg")] bg-cover bg-bottom  dark:bg-bottom mr-1.5 h-max lg:h-35 p-4 rounded-lg cursor-pointer'>
             FRONTEND DEVELOPMENT{" "}
             <p
-              className="text-lg flex justify-end mt-11 lg:mr-4 gap-2 dark:text-white cursor-pointer"
-              onClick={openModel}
-              id="4"
+              className="text-lg flex justify-end mt-11 lg:mr-4 gap-2 dark:text-white"
             >
               LEARN MORE <i className="bi bi-arrow-up-right-square "></i>
             </p>
