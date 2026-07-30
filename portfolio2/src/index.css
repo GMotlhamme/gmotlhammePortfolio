@@ -97,18 +97,18 @@
 
 @keyframes fullViewCarousel {
   0% {
-    transform: translateX(5%);
+    transform: translateX(18%);
   }
   50% {
-    transform: translateX(-10%);
+    transform: translateX(-22%);
   }
   100% {
-    transform: translateX(5%);
+    transform: translateX(18%);
   }
 }
 
 .animate-fullViewCarousel {
-  animation: fullViewCarousel 15s ease-in-out infinite;
+  animation: fullViewCarousel 18s ease-in-out infinite;
 }
 
 .animate-fullViewCarousel:hover {

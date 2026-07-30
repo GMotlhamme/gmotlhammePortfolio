@@ -13,13 +13,14 @@ function AboutMe() {
             </p>
             <p className="animate-fadeIn3 absolute lg:left-2 italic lg:top-410 sm:top-525 w-full text-2xl p-5">Gauteng, South Africa</p>
 
-            <p className="animate-fadeIn3 absolute right-9 top-300 w-150 lg:text-2xl p-5 hidden lg:block ">
+            <p className="animate-fadeIn3 absolute right-9 top-290 w-150 lg:text-2xl p-5 hidden lg:block ">
                I'm a passionate Full Stack Developer with a foundation in both
               frontend and backend technologies. I specialize in building
                responsive, user-focused web applications using HTML, CSS,
-               Tailwind CSS, JavaScript, and frameworks like React and Node.js.
-               On the backend, I work with databases like PostgreSQL
-               and I'm comfortable handling APIs, authentication, and server-side
+               Tailwind CSS, JavaScript, TypeScript with frameworks like React.
+               On the backend, I work with ASP.NET Core MVC/Web Api and  Node.js with Express.js. 
+               Additionally, I work with databases like PostgreSQL and SQL Server.
+               I'm comfortable handling APIs, authentication, and server-side
                logic.<br></br>
                <br></br>
                Beyond code, I care deeply about clean design, performance, and
@@ -34,20 +35,21 @@ function AboutMe() {
              return setMySummary(!mySummary);
             }}
             >{!mySummary ? "More" : "Less" }</button>
-            {mySummary ? <p className="backdrop-blur-3xl  z-9 animate-fadeIn3 absolute mx-auto top-415 w-fit  rounded-lg text-2xl py-15 p-5 sm:text-xl ">
-              I am, a passionate Full Stack Developer with a foundation in both
+            {mySummary ? <p className="bg-amber-50  z-9 animate-fadeIn3 absolute mx-auto top-415 w-fit  rounded-lg text-2xl py-15 p-5 sm:text-xl ">
+              I'm a passionate Full Stack Developer with a foundation in both
               frontend and backend technologies. I specialize in building
-              responsive, user-focused web applications using HTML, CSS,
-              Tailwind CSS, JavaScript, and frameworks like React and Node.js.
-              On the backend, I work with databases like PostgreSQL
-              and I'm comfortable handling APIs, authentication, and server-side
-              logic.<br></br>
-              <br></br>
-              Beyond code, I really care deeply about clean design, performance, and
-              solving real-world problems through technology. I've collaborated
-              on projects that range from improving company websites to building
-              systems from scratch, and I enjoy taking ownership from concept to
-              deployment. 
+               responsive, user-focused web applications using HTML, CSS,
+               Tailwind CSS, JavaScript, TypeScript with frameworks like React.
+               On the backend, I work with ASP.NET Core MVC/Web Api and  Node.js with Express.js. 
+               Additionally, I work with databases like PostgreSQL and SQL Server.
+               I'm comfortable handling APIs, authentication, and server-side
+               logic.<br></br>
+               <br></br>
+               Beyond code, I care deeply about clean design, performance, and
+               solving real-world problems through technology. I've collaborated
+               on projects that range from improving company websites to building
+               systems from scratch, and I enjoy taking ownership from concept to
+               deployment.
             </p>: ""
             
             }
